@@ -1,0 +1,19 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:14:p, comp table1:::p:356:p, space ::28:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp table1:::p:121:p, space ::142:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JTable" ) {
+				name: "table1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
