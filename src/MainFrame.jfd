@@ -4,12 +4,12 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :p:55:p, comp label1:::p:260:p, space ::83:x}, seq l {space :p:43:p, comp Customer:::p::p, space ::119:x, comp Vendor:::p:89:p, space :p:53:p}}"
-			"$verticalGroup": "par l {seq l {space :p:15:p, comp label1:::p:35:p, space ::153:x, par b {comp Customer::b:p::p, comp Vendor::b:p::p}, space :p:36:p}}"
+			"$horizontalGroup": "par l {seq {space :p:55:p, comp title:::p:260:p, space ::83:x}, seq l {space :p:43:p, comp Customer:::p::p, space ::119:x, comp Vendor:::p:89:p, space :p:53:p}}"
+			"$verticalGroup": "par l {seq l {space :p:15:p, comp title:::p:35:p, space ::153:x, par b {comp Customer::b:p::p, comp Vendor::b:p::p}, space :p:36:p}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
+				name: "title"
 				"text": "Vendor-Customer Management System"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
