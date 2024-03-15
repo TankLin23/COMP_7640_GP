@@ -13,7 +13,7 @@ public class VendorFrame extends JFrame {
     public VendorFrame() {
         initComponents();
     }
-
+//好像可以了
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
 
