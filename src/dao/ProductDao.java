@@ -28,5 +28,14 @@ public class ProductDao {
     }
 
 
-
+    public int update(Connection connection,Product p)throws SQLException{
+        String sql="update Product set name=?,listed_price=?,tag1=?,tag2=?,tag3=?";
+        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+        preparedStatement.setString(1,p.getName());
+        preparedStatement.setDouble(2,p.getPrice());
+        preparedStatement.setString(3,p.getTag1());
+        preparedStatement.setString(4,p.getTag2());
+        preparedStatement.setString(5,p.getTag3());
+        return preparedStatement.executeUpdate();
+    }
 }
