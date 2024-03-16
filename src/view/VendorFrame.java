@@ -1,7 +1,9 @@
+package view;
+
 import javax.swing.*;
 import javax.swing.GroupLayout;
 /*
- * Created by JFormDesigner on Thu Mar 14 17:04:44 CST 2024
+ * Created by JFormDesigner on Fri Mar 15 16:38:41 CST 2024
  */
 
 
@@ -9,14 +11,13 @@ import javax.swing.GroupLayout;
 /**
  * @author 10468
  */
-public class CustomerFrame extends JFrame {
-    public CustomerFrame() {
+public class VendorFrame extends JFrame {
+    public VendorFrame() {
         initComponents();
     }
-
+//好像可以了
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        table1 = new JTable();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -25,17 +26,11 @@ public class CustomerFrame extends JFrame {
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(14, 14, 14)
-                    .addComponent(table1, GroupLayout.PREFERRED_SIZE, 356, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(28, Short.MAX_VALUE))
+                .addGap(0, 398, Short.MAX_VALUE)
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(table1, GroupLayout.PREFERRED_SIZE, 121, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(142, Short.MAX_VALUE))
+                .addGap(0, 269, Short.MAX_VALUE)
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -43,6 +38,5 @@ public class CustomerFrame extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
