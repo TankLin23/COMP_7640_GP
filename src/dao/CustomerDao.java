@@ -1,6 +1,7 @@
 package dao;
 
 import model.Customer;
+import model.Vendor;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -36,6 +37,12 @@ public class CustomerDao {
         preparedStatement.setString(1, c.getContact_number());
         preparedStatement.setString(2,c.getShipping_details());
         preparedStatement.setString(3,c.getID());
+        return preparedStatement.executeUpdate();
+    }
+    public int delete(Connection connection, Customer c)throws SQLException{
+        String sql="delete from vendor where customer_id=?";
+        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+        preparedStatement.setString(1,c.getID());
         return preparedStatement.executeUpdate();
     }
 }
