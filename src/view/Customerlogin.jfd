@@ -3,54 +3,33 @@ JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.10" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :149:149:p, comp title1:::p::p}, seq {space :39:39:p, comp label1:::p:75:p, space :5:5:p, comp formattedTextField1:::p:145:p}, seq {space :49:49:p, comp label2:::p:60:p, space :10:10:p, comp passwordField1:::p:145:p}, seq l {space :p:160:p, comp button1:::p::p}}, space :p:164:p}}"
+			"$verticalGroup": "par l {seq {space :40:40:p, comp title1:::p::p, space :18:18:p, par l {seq {space :5:5:p, comp label1:::p:20:p}, comp formattedTextField1:::p::p}, space :5:5:p, par l {seq {space :10:10:p, comp label2:::p::p}, comp passwordField1:::p::p}, space :p:55:p, comp button1:::p::p, space :::p}}"
+		} ) {
 			name: "this"
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title1"
 				"textWithMnemonic": "Customer login"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 150
-				"y": 70
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": "Customer_ID"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 40
-				"y": 110
-				"width": 75
-				"height": 20
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
 				name: "formattedTextField1"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 120
-				"y": 105
-				"width": 145
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
 				"text": "PassWord"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 60
-				"height": 17
-				"x": 50
-				"y": 150
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
 				"text": "Log in"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "login", true ) )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 155
-				"y": 185
 			} )
 			add( new FormComponent( "javax.swing.JPasswordField" ) {
 				name: "passwordField1"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 120
-				"y": 140
-				"width": 145
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

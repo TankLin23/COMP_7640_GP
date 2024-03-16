@@ -43,44 +43,62 @@ public class Customerlogin extends JFrame {
 
         //======== this ========
         var contentPane = getContentPane();
-        contentPane.setLayout(null);
-        contentPane.add(title1);
-        title1.setBounds(new Rectangle(new Point(150, 70), title1.getPreferredSize()));
 
         //---- label1 ----
         label1.setText("Customer_ID");
-        contentPane.add(label1);
-        label1.setBounds(40, 110, 75, 20);
-        contentPane.add(formattedTextField1);
-        formattedTextField1.setBounds(120, 105, 145, formattedTextField1.getPreferredSize().height);
 
         //---- label2 ----
         label2.setText("PassWord");
-        contentPane.add(label2);
-        label2.setBounds(50, 150, 60, 17);
 
         //---- button1 ----
         button1.setText("Log in");
         button1.addActionListener(e -> login(e));
-        contentPane.add(button1);
-        button1.setBounds(new Rectangle(new Point(155, 185), button1.getPreferredSize()));
-        contentPane.add(passwordField1);
-        passwordField1.setBounds(120, 140, 145, passwordField1.getPreferredSize().height);
 
-        {
-            // compute preferred size
-            Dimension preferredSize = new Dimension();
-            for(int i = 0; i < contentPane.getComponentCount(); i++) {
-                Rectangle bounds = contentPane.getComponent(i).getBounds();
-                preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-            }
-            Insets insets = contentPane.getInsets();
-            preferredSize.width += insets.right;
-            preferredSize.height += insets.bottom;
-            contentPane.setMinimumSize(preferredSize);
-            contentPane.setPreferredSize(preferredSize);
-        }
+        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+        contentPane.setLayout(contentPaneLayout);
+        contentPaneLayout.setHorizontalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(149, 149, 149)
+                            .addComponent(title1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(39, 39, 39)
+                            .addComponent(label1, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
+                            .addGap(5, 5, 5)
+                            .addComponent(formattedTextField1, GroupLayout.PREFERRED_SIZE, 145, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(49, 49, 49)
+                            .addComponent(label2, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                            .addGap(10, 10, 10)
+                            .addComponent(passwordField1, GroupLayout.PREFERRED_SIZE, 145, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(160, 160, 160)
+                            .addComponent(button1)))
+                    .addGap(164, 164, 164))
+        );
+        contentPaneLayout.setVerticalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(40, 40, 40)
+                    .addComponent(title1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(5, 5, 5)
+                            .addComponent(label1, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(formattedTextField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(5, 5, 5)
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(label2))
+                        .addComponent(passwordField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(55, 55, 55)
+                    .addComponent(button1)
+                    .addContainerGap())
+        );
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
