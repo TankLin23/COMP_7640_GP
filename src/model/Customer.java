@@ -34,4 +34,8 @@ public class Customer {
     public void setShipping_details(String shipping_details) {
         this.shipping_details = shipping_details;
     }
+
+    public String getID() {
+        return ID;
+    }
 }
