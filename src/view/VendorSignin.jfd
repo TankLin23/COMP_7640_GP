@@ -1,0 +1,71 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Querying existing VendorID"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "QueryVendorIDList", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 255
+				"y": 165
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 10
+				"y": 5
+				"width": 440
+				"height": 150
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title1"
+				"textWithMnemonic": "Your New ID"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 20
+				"y": 230
+				"width": 75
+			} )
+			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+				name: "formattedTextField1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 105
+				"y": 225
+				"width": 125
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title2"
+				"textWithMnemonic": "Your PassWord"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 100
+				"height": 17
+				"x": 10
+				"y": 265
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordField1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 105
+				"y": 260
+				"width": 125
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "submit"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submit", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 255
+				"y": 240
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 470, 370 )
+		} )
+	}
+}

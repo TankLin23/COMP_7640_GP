@@ -1,0 +1,68 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title1"
+				"textWithMnemonic": "Vendor Login"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 165
+				"y": 85
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title2"
+				"textWithMnemonic": "Vendor_ID"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 65
+				"height": 17
+				"x": 75
+				"y": 115
+			} )
+			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+				name: "formattedTextField1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 140
+				"y": 110
+				"width": 145
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title3"
+				"textWithMnemonic": "PassWord"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 65
+				"height": 17
+				"x": 75
+				"y": 155
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordField1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 140
+				"y": 145
+				"width": 145
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Login"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "login", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 75
+				"y": 190
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Sign in"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Signin", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 265
+				"y": 190
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 5 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

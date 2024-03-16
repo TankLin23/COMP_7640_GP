@@ -18,21 +18,35 @@ public class MainFrame extends JFrame {
 
     }
 
+
     private void CustomerMouseClicked(MouseEvent e) {
-        System.out.println("Costomer");
+        // TODO add your code here
+        Customerlogin Customer = new Customerlogin();
+        Customer.setVisible(true);
     }
+
+    private void Vendor(ActionEvent e) {
+        // TODO add your code here
+        Vendorlogin Vendor = new Vendorlogin();
+        Vendor.setVisible(true);
+    }
+
+    //private void XuMouseClicked(MouseEvent e) {
+        // TODO add your code here
+    //}
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         title = new JLabel();
         Customer = new JButton();
         Vendor = new JButton();
+        title2 = new JLabel();
 
         //======== this ========
         var contentPane = getContentPane();
 
         //---- title ----
-        title.setText("Vendor-Customer Management System");
+        title.setText("    Vendor-Customer Management System");
 
         //---- Customer ----
         Customer.setText("Customer");
@@ -45,28 +59,38 @@ public class MainFrame extends JFrame {
 
         //---- Vendor ----
         Vendor.setText("Vendor");
+        Vendor.addActionListener(e -> Vendor(e));
+
+        //---- title2 ----
+        title2.setText("              Please select your identity");
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(55, 55, 55)
-                    .addComponent(title, GroupLayout.PREFERRED_SIZE, 260, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(83, Short.MAX_VALUE))
-                .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGap(43, 43, 43)
                     .addComponent(Customer)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
                     .addComponent(Vendor, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
                     .addGap(53, 53, 53))
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(63, 63, 63)
+                    .addComponent(title, GroupLayout.PREFERRED_SIZE, 260, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                    .addContainerGap(73, Short.MAX_VALUE)
+                    .addComponent(title2, GroupLayout.PREFERRED_SIZE, 260, GroupLayout.PREFERRED_SIZE)
+                    .addGap(65, 65, 65))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(15, 15, 15)
-                    .addComponent(title, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
+                    .addGap(17, 17, 17)
+                    .addComponent(title, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                    .addComponent(title2, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
+                    .addGap(32, 32, 32)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(Customer)
                         .addComponent(Vendor))
@@ -81,5 +105,6 @@ public class MainFrame extends JFrame {
     private JLabel title;
     private JButton Customer;
     private JButton Vendor;
+    private JLabel title2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
