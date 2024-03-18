@@ -3,32 +3,60 @@
  */
 
 package view;
-
+import model.Customer;
+import until.DBUntils;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.Connection;
 import javax.swing.*;
 import com.jgoodies.forms.factories.*;
+import dao.CustomerDao;
+import until.StringUtil;
 
 /**
  * @author XuYundi
  */
 public class Customerlogin extends JFrame {
+
+    private CustomerDao customerDao=new CustomerDao();
+    private DBUntils dbUntils=new DBUntils();
     public Customerlogin() {
         initComponents();
     }
 
     private void login(ActionEvent e) {
-        // TODO add your code here
+
         //Get the ID number and password
         String CustomerID = formattedTextField1.getText();
         char[] password = passwordField1.getPassword();
         String passwordString = new String(password);
+        if(StringUtil.isEmpty(CustomerID)){
+            JOptionPane.showMessageDialog(null,"ID cannot be null");
+            return;
+        }
+        if (StringUtil.isEmpty(passwordString)){
+            JOptionPane.showMessageDialog(null,"Password cannot be null");
+            return;
+        }
+        Customer customer=new Customer(CustomerID,passwordString);
+        Connection conn=null;
+        try{
+            //try to connect database
+            conn=dbUntils.getCon();
+            //verify the ID and password
+            Customer currentCustomer=customerDao.login(conn,customer);
+            if (currentCustomer!=null){
+                dispose();
+                // After connecting to the database, check whether the ID and password are correct
+                CustomerFrame CustomerFrame = new CustomerFrame();
+                System.out.println(CustomerID);
+                System.out.println(passwordString);
+                CustomerFrame.setVisible(true);
+            }
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
 
-        // After connecting to the database, check whether the ID and password are correct
-        CustomerFrame Customer = new CustomerFrame();
-        System.out.println(CustomerID);
-        System.out.println(passwordString);
-        Customer.setVisible(true);
     }
 
     private void initComponents() {
