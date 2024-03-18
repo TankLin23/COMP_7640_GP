@@ -11,8 +11,9 @@ create table `order`
 (
     o_id        int auto_increment
         primary key,
-    customer_id int  null,
-    o_date      date null
+    customer_id int          null,
+    o_date      date         null,
+    status      varchar(255) null
 );
 
 create table orderitem
@@ -42,7 +43,8 @@ create table vendor
         primary key,
     business_name         varchar(255)  null,
     feedback_score        decimal(4, 2) null,
-    geographical_presence varchar(255)  null
+    geographical_presence varchar(255)  null,
+    password              varchar(10)   not null
 );
 
 
