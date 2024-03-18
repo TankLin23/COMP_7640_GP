@@ -10,8 +10,8 @@ import java.sql.SQLException;
 public class VendorDao {
 
     //check the exit vendor
-    public ResultSet checkvendor(Connection connection,Vendor vendor)throws Exception{
-        String sql="select * from vendor";
+    public ResultSet checkvendor(Connection connection)throws Exception{
+        String sql="select vendor_id, business_name, feedback_score, geographical_persence from vendor";
         PreparedStatement preparedStatement= connection.prepareStatement(sql);
         return preparedStatement.executeQuery();
     }

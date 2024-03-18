@@ -6,20 +6,28 @@ package view;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.Vector;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import until.DBUntils;
 import com.jgoodies.forms.factories.*;
+import dao.VendorDao;
+import model.Vendor;
 
 /**
  * @author XuYundi
  */
+
 public class VendorSignin extends JFrame {
     public VendorSignin() {
         initComponents();
     }
 
-    private void QueryVendorIDList(ActionEvent e) {
-        // TODO add your code here
-        //Query the Vendor ID list after connecting to the database
+    private void QueryVendorIDList(ActionEvent e) throws Exception {
+
     }
 
     private void submit(ActionEvent e) {
@@ -32,10 +40,15 @@ public class VendorSignin extends JFrame {
         System.out.println(NewVendorpasswordString);
     }
 
+    private void Queryexistvendor(ActionEvent e) {
+        //Query the Vendor ID list after connecting to the database
+
+
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         DefaultComponentFactory compFactory = DefaultComponentFactory.getInstance();
-        button1 = new JButton();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
         title1 = compFactory.createTitle("Your New ID");
@@ -43,16 +56,11 @@ public class VendorSignin extends JFrame {
         title2 = compFactory.createTitle("Your PassWord");
         passwordField1 = new JPasswordField();
         button2 = new JButton();
+        button1 = new JButton();
 
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
-
-        //---- button1 ----
-        button1.setText("Querying existing VendorID");
-        button1.addActionListener(e -> QueryVendorIDList(e));
-        contentPane.add(button1);
-        button1.setBounds(new Rectangle(new Point(255, 165), button1.getPreferredSize()));
 
         //======== scrollPane1 ========
         {
@@ -75,6 +83,12 @@ public class VendorSignin extends JFrame {
         contentPane.add(button2);
         button2.setBounds(new Rectangle(new Point(255, 240), button2.getPreferredSize()));
 
+        //---- button1 ----
+        button1.setText("text");
+        button1.addActionListener(e -> Queryexistvendor(e));
+        contentPane.add(button1);
+        button1.setBounds(new Rectangle(new Point(300, 170), button1.getPreferredSize()));
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -95,7 +109,6 @@ public class VendorSignin extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JButton button1;
     private JScrollPane scrollPane1;
     private JTable table1;
     private JLabel title1;
@@ -103,5 +116,6 @@ public class VendorSignin extends JFrame {
     private JLabel title2;
     private JPasswordField passwordField1;
     private JButton button2;
+    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
