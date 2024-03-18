@@ -4,10 +4,25 @@ import model.Vendor;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class VendorDao {
 
+    //check the exit vendor
+    public ResultSet checkvendor(Connection connection,Vendor vendor)throws Exception{
+        String sql="select * from vendor";
+        PreparedStatement preparedStatement= connection.prepareStatement(sql);
+        return preparedStatement.executeQuery();
+    }
+
+    /**
+     * add vendor
+     * @param connection
+     * @param v
+     * @return
+     * @throws SQLException
+     */
     public int add(Connection connection , Vendor v) throws SQLException {
         String sql= "insert into Vendor values(null,?,?,?)";
         PreparedStatement preparedStatement=connection.prepareStatement(sql);
@@ -17,6 +32,13 @@ public class VendorDao {
         return preparedStatement.executeUpdate();
     }
 
+    /**
+     * update vendor information
+     * @param connection
+     * @param v
+     * @return
+     * @throws SQLException
+     */
     public int update(Connection connection,Vendor v)throws SQLException{
         String sql="update Vendor set business_name=?,feedback_score=?,geographical_presence=? where vendor_id=?";
         PreparedStatement preparedStatement=connection.prepareStatement(sql);
@@ -27,6 +49,13 @@ public class VendorDao {
         return preparedStatement.executeUpdate();
     }
 
+    /**
+     * delete vendor record
+     * @param connection
+     * @param v
+     * @return
+     * @throws SQLException
+     */
     public int delete(Connection connection,Vendor v)throws SQLException{
         String sql="delete from vendor where vendor_id=?";
         PreparedStatement preparedStatement=connection.prepareStatement(sql);

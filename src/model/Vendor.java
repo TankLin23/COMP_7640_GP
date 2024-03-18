@@ -4,6 +4,17 @@ public class Vendor {
 
     private String ID;
 
+
+    public Vendor(String ID, String password, String business_name, Double feedback_score, String geographical_presence) {
+        this.ID = ID;
+        this.password = password;
+        this.business_name = business_name;
+        this.feedback_score = feedback_score;
+        this.geographical_presence = geographical_presence;
+    }
+
+    private String password;
+
     private String business_name;
 
     private Double feedback_score;
@@ -22,6 +33,13 @@ public class Vendor {
 
     public void setID(String ID) {
         this.ID = ID;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getBusiness_name() {
