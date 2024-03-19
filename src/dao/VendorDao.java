@@ -10,6 +10,20 @@ import java.sql.SQLException;
 
 public class VendorDao {
 
+
+public int feedback_positive(Connection connection,String v_id)throws SQLException{
+    String sql="update vendor set feedback_score=feedback_score+0.1 where vendor_id=?";
+    PreparedStatement preparedStatement=connection.prepareStatement(sql);
+    preparedStatement.setString(1,v_id);
+    return preparedStatement.executeUpdate();
+}
+    public int feedback_negative(Connection connection,String v_id)throws SQLException{
+        String sql="update vendor set feedback_score=feedback_score-0.1 where vendor_id=?";
+        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+        preparedStatement.setString(1,v_id);
+        return preparedStatement.executeUpdate();
+    }
+
     //check the exit vendor
     public ResultSet checkvendor(Connection connection)throws Exception{
         String sql="select vendor_id, business_name, feedback_score, geographical_presence from vendor";

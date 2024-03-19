@@ -29,11 +29,10 @@ public class MainFrame extends JFrame {
         // TODO add your code here
         Vendorlogin Vendor = new Vendorlogin();
         Vendor.setVisible(true);
+        dispose();
     }
 
-    //private void XuMouseClicked(MouseEvent e) {
-        // TODO add your code here
-    //}
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off

@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :::p, comp scrollPane1::::746:x, space :::p}, seq l {par l {seq t {space :::p, comp button5:::p:191:p, space :p:91:p}, seq l {par t:::p {seq t {space :p:23:p, comp title4:::p::p, space u:::p, comp formattedTextField4:::p:256:p}, seq t {space :p:36:p, comp title3:::p::p, space :::x, comp formattedTextField3:::p:256:p}}, space :p:58:p}}, par l {comp title5:::p:257:p, par t:l {seq {comp formattedTextField5:::p:132:p, space s:::p, comp button7:::p::p}, par l:t {comp button9::l:p:170:p, comp button8::t:p:170:p}}}, space :0:75:x}, seq l {space :p:147:p, comp button6:::p:198:p, space ::139:x, comp button1:::p:170:p, space ::104:x}}"
-			"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:231:p, par l {seq l {space s:::p, par b {comp formattedTextField3::b:p::p, comp title3::b:p::p}, space :::p, comp button5:::p::p, space :p:4:p, par l {comp title4:::p::p, comp formattedTextField4:::p::p}, space :::p, comp button6:::p::p}, seq l {space :p:8:p, comp title5:::p::p, space :::p, par b {comp formattedTextField5::b:p::p, comp button7::b:p::p}, space :::p, comp button8:::p::p, space u:::p, comp button9:::p::p, space :::p, comp button1:::p::p}}, space :::x}}"
+			"$horizontalGroup": "par l {seq {space :::p, comp scrollPane1::::746:x, space :::p}, seq l {par l {seq t {space :::p, comp button5:::p:191:p, space :p:91:p}, seq l {par t:::p {seq t {space :p:23:p, comp title4:::p::p, space u:::p, comp vendor_textfield:::p:256:p}, seq t {space :p:36:p, comp title3:::p::p, space :::x, comp tag:::p:256:p}}, space :p:58:p}}, par l {comp title5:::p:257:p, par t:l {seq {comp formattedTextField5:::p:132:p, space s:::p, comp button7:::p::p}, par l:t {comp button9::l:p:170:p, comp button8::t:p:170:p}}}, space :0:70:x}, seq l {space :p:147:p, comp button6:::p:198:p, space ::139:x, comp button1:::p:170:p, space ::104:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:231:p, par l {seq l {space s:::p, par b {comp tag::b:p::p, comp title3::b:p::p}, space :::p, comp button5:::p::p, space :p:4:p, par l {comp title4:::p::p, comp vendor_textfield:::p::p}, space :::p, comp button6:::p::p}, seq l {space :p:8:p, comp title5:::p::p, space :::p, par b {comp formattedTextField5::b:p::p, comp button7::b:p::p}, space :::p, comp button8:::p::p, space u:::p, comp button9:::p::p, space :::p, comp button1:::p::p}}, space :::x}}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -499,7 +499,7 @@ new FormModel {
 				} )
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField3"
+				name: "tag"
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title3"
@@ -511,7 +511,7 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "SearchProductName", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField4"
+				name: "vendor_textfield"
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title4"
@@ -555,4 +555,3 @@ new FormModel {
 		} )
 	}
 }
-

@@ -9,6 +9,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ProductDao {
+
+    public ResultSet get_product_by_tag(Connection connection,String tag)throws Exception{
+        String sql="select * from product join vendor on product.vendor_id=vendor.vendor_id where tag1=? or tag2=? or tag3=?";
+        PreparedStatement preparedStatement= connection.prepareStatement(sql);
+        preparedStatement.setString(1,tag);
+        preparedStatement.setString(2,tag);
+        preparedStatement.setString(3,tag);
+        return preparedStatement.executeQuery();
+    }
     public ResultSet checkprocuct(Connection connection, String vendor_id)throws Exception{
         String sql="select * from product where vendor_id = ?";
         PreparedStatement preparedStatement= connection.prepareStatement(sql);
