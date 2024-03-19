@@ -3,8 +3,15 @@ package model;
 public class Vendor {
 
     private String ID;
+    private String contact_number;
 
-
+    private String shipping_details;
+    public Vendor() {
+    }
+    public Vendor(String id, String password) {
+        this.ID = id;
+        this.password = password;
+    }
     public Vendor(String ID, String password, String business_name, Double feedback_score, String geographical_presence) {
         this.ID = ID;
         this.password = password;
@@ -21,10 +28,11 @@ public class Vendor {
 
     private String geographical_presence;
 
-    public Vendor(String business_name, Double feedback_score, String geographical_presence) {
+    public Vendor(String business_name, Double feedback_score, String geographical_presence,String password) {
         this.business_name = business_name;
         this.feedback_score = feedback_score;
         this.geographical_presence = geographical_presence;
+        this.password = password;
     }
 
     public String getID() {
@@ -65,4 +73,5 @@ public class Vendor {
     public void setGeographical_presence(String geographical_presence) {
         this.geographical_presence = geographical_presence;
     }
+
 }

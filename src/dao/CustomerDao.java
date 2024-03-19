@@ -15,7 +15,7 @@ public class CustomerDao {
 
 public Customer login(Connection connection,Customer customer)throws Exception{
     Customer resultcustomer=null;
-    String sql="select * where id=? and password=?";
+    String sql="select * from customer where custmoer_id=? and password=?";
     PreparedStatement preparedStatement=connection.prepareStatement(sql);
     preparedStatement.setString(1, customer.getID());
     preparedStatement.setString(2, customer.getPassword());

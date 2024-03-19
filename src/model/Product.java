@@ -5,15 +5,17 @@ public class Product {
     private String vendor_ID;
     private String name;
     private Double price;
+    private int quantity;
     private String tag1;
     private String tag2;
     private String tag3;
 
-    public Product(String ID, String vendor_ID, String name, Double price, String tag1, String tag2, String tag3) {
-        this.ID = ID;
+    public Product(String vendor_ID, String name, Double price, String tag1, String tag2, String tag3, int quantity) {
+        //this.ID = ID;
         this.vendor_ID = vendor_ID;
         this.name = name;
         this.price = price;
+        this.quantity = quantity;
         this.tag1 = tag1;
         this.tag2 = tag2;
         this.tag3 = tag3;
@@ -63,7 +65,7 @@ public class Product {
     public Double getPrice() {
         return price;
     }
-
+    public int getQuantity(){return quantity;}
     public void setPrice(Double price) {
         this.price = price;
     }

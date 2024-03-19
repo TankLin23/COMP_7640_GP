@@ -6,8 +6,16 @@ package view;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.Connection;
+import java.util.Locale;
 import javax.swing.*;
 import com.jgoodies.forms.factories.*;
+import dao.CustomerDao;
+import dao.VendorDao;
+import model.Customer;
+import model.Vendor;
+import until.StringUtil;
+import until.DBUntils;
 
 /**
  * @author XuYundi
@@ -16,23 +24,57 @@ public class Vendorlogin extends JFrame {
     public Vendorlogin() {
         initComponents();
     }
-
+    private VendorDao vendorDao=new VendorDao();
+    private DBUntils dbUntils=new DBUntils();
     private void login(ActionEvent e) {
-        // TODO add your code here
         //Get the ID number and password
         String VendorID = formattedTextField1.getText();
         char[] Vendorpassword = passwordField1.getPassword();
         String VendorpasswordString = new String(Vendorpassword);
+        Locale.setDefault(Locale.ENGLISH);
+
+        // Change the default locale for UIManager
+        UIManager.put("OptionPane.yesButtonText", "Yes");
+        UIManager.put("OptionPane.noButtonText", "No");
+        UIManager.put("OptionPane.okButtonText", "OK");
+        UIManager.put("OptionPane.cancelButtonText", "Cancel");
 
         // After connecting to the database, check whether the ID and password are correct
-        VendorFrame Vendor = new VendorFrame();
-        System.out.println(VendorID);
-        System.out.println(VendorpasswordString);
-        Vendor.setVisible(true);
+        //System.out.println(VendorID);
+        //System.out.println(VendorpasswordString);
+        if(StringUtil.isEmpty(VendorID)){
+            JOptionPane.showMessageDialog(null,"ID cannot be null");
+            return;
+        }
+        if (StringUtil.isEmpty(VendorpasswordString)){
+            JOptionPane.showMessageDialog(null,"Password cannot be null");
+            return;
+        }
+        Vendor vendor=new Vendor(VendorID,VendorpasswordString);
+        Connection conn = null;
+        try{
+            //try to connect database
+            conn=dbUntils.getCon();
+            //verify the ID and password
+            Vendor currentVendor= vendorDao.login(conn,vendor);
+            if (currentVendor!=null){
+                dispose();
+                VendorFrame Vendor = new VendorFrame();
+                Vendor.receiveValue(VendorID);
+                Vendor.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"The ID or password is incorrect");
+                return;
+            }
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
+
     }
 
     private void Signin(ActionEvent e) {
-        // TODO add your code here
+        dispose();
         VendorSignin VS = new VendorSignin();
         VS.setVisible(true);
     }

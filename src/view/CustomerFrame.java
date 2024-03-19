@@ -41,13 +41,17 @@ public class CustomerFrame extends JFrame {
         VOD.setVisible(true);
     }
 
+    private void feedback(ActionEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         DefaultComponentFactory compFactory = DefaultComponentFactory.getInstance();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
         formattedTextField3 = new JFormattedTextField();
-        title3 = compFactory.createTitle("Product name");
+        title3 = compFactory.createTitle("Tag");
         button5 = new JButton();
         formattedTextField4 = new JFormattedTextField();
         title4 = compFactory.createTitle("Vendor name");
@@ -57,6 +61,7 @@ public class CustomerFrame extends JFrame {
         button7 = new JButton();
         button8 = new JButton();
         button9 = new JButton();
+        button1 = new JButton();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -134,7 +139,7 @@ public class CustomerFrame extends JFrame {
         }
 
         //---- button5 ----
-        button5.setText("Search product name");
+        button5.setText("Search ");
         button5.addActionListener(e -> SearchProductName(e));
 
         //---- button6 ----
@@ -153,6 +158,10 @@ public class CustomerFrame extends JFrame {
         button9.setText("View ongoing deals");
         button9.addActionListener(e -> ViewOngoingDeals(e));
 
+        //---- button1 ----
+        button1.setText("feedback");
+        button1.addActionListener(e -> feedback(e));
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
@@ -168,16 +177,17 @@ public class CustomerFrame extends JFrame {
                             .addComponent(button5, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
                             .addGap(91, 91, 91))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(23, 23, 23)
-                            .addGroup(contentPaneLayout.createParallelGroup()
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(title3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(formattedTextField3, GroupLayout.PREFERRED_SIZE, 256, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(23, 23, 23)
                                     .addComponent(title4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(formattedTextField4, GroupLayout.PREFERRED_SIZE, 256, GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(formattedTextField4, GroupLayout.PREFERRED_SIZE, 256, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(36, 36, 36)
+                                    .addComponent(title3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(formattedTextField3, GroupLayout.PREFERRED_SIZE, 256, GroupLayout.PREFERRED_SIZE)))
                             .addGap(58, 58, 58)))
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addComponent(title5, GroupLayout.PREFERRED_SIZE, 257, GroupLayout.PREFERRED_SIZE)
@@ -193,7 +203,9 @@ public class CustomerFrame extends JFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGap(147, 147, 147)
                     .addComponent(button6, GroupLayout.PREFERRED_SIZE, 198, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(413, Short.MAX_VALUE))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                    .addComponent(button1, GroupLayout.PREFERRED_SIZE, 170, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(104, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -204,8 +216,8 @@ public class CustomerFrame extends JFrame {
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGap(18, 18, 18)
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                .addComponent(title3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(formattedTextField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addComponent(formattedTextField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(title3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(button5)
                             .addGap(4, 4, 4)
@@ -224,8 +236,10 @@ public class CustomerFrame extends JFrame {
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(button8)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(button9)))
-                    .addContainerGap(23, Short.MAX_VALUE))
+                            .addComponent(button9)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button1)))
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -246,5 +260,6 @@ public class CustomerFrame extends JFrame {
     private JButton button7;
     private JButton button8;
     private JButton button9;
+    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

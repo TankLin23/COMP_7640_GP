@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par t {seq t {par l {seq {space ::61:x, comp title1:::p::p, space :p:60:p, comp formattedTextField1:::p:148:p}, seq l {space :p:48:p, comp title2:::p::p, space ::50:x, comp formattedTextField3:::p:148:p}}, space ::245:x, comp button1:::p:101:p}, seq l {space :p:26:p, par l {comp title3:::p::p, comp title4:::p::p}, space :p:33:p, par l {seq {comp formattedTextField5:::p:148:p, space ::245:x, comp button2:::p:101:p}, seq {comp formattedTextField4:::p:148:p, space :0:346:x}}}}, space :p:15:p}, seq t {comp scrollPane1::::682:x, space :::p}}"
-			"$verticalGroup": "par l {seq l {comp scrollPane1:::p:234:p, par l {seq l {space :p:12:p, comp button1:::p:70:p, space u:::x}, seq {space :::x, par b {comp formattedTextField1::b:p::p, comp title1::b:p::p}, space :::p, par b {comp formattedTextField3::b:p::p, comp title2::b:p::p}, space :p:15:p}}, par l {comp button2:::p:70:p, seq l {par b {comp title3::b:p::p, comp formattedTextField4::b:p::p}, space s:::p, par b {comp title4::b:p::p, comp formattedTextField5::b:p::p}}}, space ::23:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:13:p, par t {par l:t::p {seq l {space :p:19:p, comp title2:::p::p, space :p:26:p, comp formattedTextField3:::p:148:p, space u:::p, comp title1:::::x}, seq t {comp title4:::p::p, space :::p, comp formattedTextField5:::p:148:p, space u:::p, comp title6:::p:32:p}}, seq t {comp title3:::p::p, space :::p, comp formattedTextField4:::p:148:p, space u:::p, comp title5:::p:32:p}}, space u:::p, par t {par l:::p {comp formattedTextField2::::96:x, comp formattedTextField1::::96:x}, comp formattedTextField6:::p:96:p}, space :::x, comp button1:::p:101:p, space s:::p, par l:::p {comp button3::::119:x, comp button2::::119:x}}, comp scrollPane1::t:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {comp scrollPane1:::p:234:p, space :::p, par l {seq {comp button3:::p:53:p, space :p:28:p, comp button2:::p:43:p, space :0:30:x}, seq {par t:::p {comp button1::l:::x, seq {par b {comp formattedTextField3::b:p::p, comp title1::b:p::p, comp formattedTextField1::b:p::p, comp title2::b:p::p}, space s:::p, par b {comp formattedTextField4::b:p::p, comp title5::b:p::p, comp formattedTextField2::b:p::p, comp title3::b:p::p}, space s:::p, par l {comp title4:::p::p, par b {comp formattedTextField5::b:p::p, comp title6::b:p::p, comp formattedTextField6::b:p::p}}}}, space ::28:x}}}}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -21,15 +21,8 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
-				"text": "View order"
+				"text": "View orderv"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Vieworder", true ) )
-			} )
-			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
-				name: "title1"
-				"textWithMnemonic": "Vendor ID"
-			} )
-			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField1"
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title2"
@@ -52,9 +45,35 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
 				name: "formattedTextField5"
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "View Product"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "viewproduct", true ) )
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title1"
+				"textWithMnemonic": "Tag1"
+			} )
+			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+				name: "formattedTextField1"
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title5"
+				"textWithMnemonic": "Tag2"
+			} )
+			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+				name: "formattedTextField2"
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title6"
+				"textWithMnemonic": "Tag3"
+			} )
+			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+				name: "formattedTextField6"
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 690, 460 )
+			"location": new java.awt.Point( 0, 5 )
+			"size": new java.awt.Dimension( 690, 425 )
 		} )
 	}
 }

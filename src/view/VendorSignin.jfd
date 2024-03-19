@@ -17,34 +17,19 @@ new FormModel {
 				"height": 150
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
-				name: "title1"
-				"textWithMnemonic": "Your New ID"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 20
-				"y": 230
-				"width": 75
-			} )
-			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField1"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 105
-				"y": 225
-				"width": 125
-			} )
-			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title2"
 				"textWithMnemonic": "Your PassWord"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 17
-				"x": 10
-				"y": 265
+				"x": 15
+				"y": 220
 			} )
 			add( new FormComponent( "javax.swing.JPasswordField" ) {
 				name: "passwordField1"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 105
-				"y": 260
+				"x": 125
+				"y": 215
 				"width": 125
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -52,20 +37,103 @@ new FormModel {
 				"text": "submit"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submit", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 255
-				"y": 240
+				"x": 275
+				"y": 245
+				"width": 110
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "text"
+				"text": "Search existing vendors"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Queryexistvendor", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 300
-				"y": 170
+				"x": 160
+				"y": 165
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title3"
+				"textWithMnemonic": "Your business name"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 0
+				"y": 255
+			} )
+			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+				name: "formattedTextField2"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 125
+				"height": 30
+				"x": 125
+				"y": 250
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title4"
+				"textWithMnemonic": "Your location"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 20
+				"y": 290
+			} )
+			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+				name: "formattedTextField3"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 125
+				"height": 30
+				"x": 125
+				"y": 285
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
+			"location": new java.awt.Point( 5, 5 )
 			"size": new java.awt.Dimension( 470, 370 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "dialog1"
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title5"
+				"textWithMnemonic": "business name duplication"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 60
+				"y": 55
+				"width": 200
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "OK"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "backtoVendorSignin", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 100
+				"y": 95
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 490, 5 )
+			"size": new java.awt.Dimension( 280, 230 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "dialog2"
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title6"
+				"textWithMnemonic": "Congratulations on your registration, your ID is:"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 15
+				"y": 35
+				"width": 280
+				"height": 30
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button4"
+				"text": "OK"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "gotoVendorLogin", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 110
+				"y": 120
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 45
+				"y": 70
+				"width": 215
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 510, 255 )
+			"size": new java.awt.Dimension( 310, 215 )
 		} )
 	}
 }

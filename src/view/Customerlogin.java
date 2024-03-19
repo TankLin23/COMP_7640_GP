@@ -8,6 +8,7 @@ import until.DBUntils;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.Connection;
+import java.util.Locale;
 import javax.swing.*;
 import com.jgoodies.forms.factories.*;
 import dao.CustomerDao;
@@ -30,6 +31,12 @@ public class Customerlogin extends JFrame {
         String CustomerID = formattedTextField1.getText();
         char[] password = passwordField1.getPassword();
         String passwordString = new String(password);
+        Locale.setDefault(Locale.ENGLISH);
+        // Change the default locale for UIManager
+        UIManager.put("OptionPane.yesButtonText", "Yes");
+        UIManager.put("OptionPane.noButtonText", "No");
+        UIManager.put("OptionPane.okButtonText", "OK");
+        UIManager.put("OptionPane.cancelButtonText", "Cancel");
         if(StringUtil.isEmpty(CustomerID)){
             JOptionPane.showMessageDialog(null,"ID cannot be null");
             return;
@@ -47,11 +54,14 @@ public class Customerlogin extends JFrame {
             Customer currentCustomer=customerDao.login(conn,customer);
             if (currentCustomer!=null){
                 dispose();
-                // After connecting to the database, check whether the ID and password are correct
                 CustomerFrame CustomerFrame = new CustomerFrame();
                 System.out.println(CustomerID);
                 System.out.println(passwordString);
                 CustomerFrame.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"The ID or password is incorrect");
+                return;
             }
         } catch (Exception ex) {
             throw new RuntimeException(ex);
