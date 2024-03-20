@@ -3,28 +3,19 @@ package model;
 public class Order {
     private String ID;
     private String c_id;
+    private int status;
+    private String v_id;
+    private String p_id;
+    private int quantity;
+    private int price;
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
+    public Order(String c_id, int status, String v_id, String p_id, int quantity, int price) {
+        this.c_id = c_id;
         this.status = status;
-    }
-
-    private String status;
-    private String date;
-
-    public Order(String c_id, String date) {
-        this.c_id = c_id;
-        this.date = date;
-    }
-
-    public Order(String ID, String c_id, String date,String status) {
-        this.ID = ID;
-        this.c_id = c_id;
-        this.date = date;
-        this.status=status;
+        this.v_id = v_id;
+        this.p_id = p_id;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public String getID() {
@@ -43,11 +34,44 @@ public class Order {
         this.c_id = c_id;
     }
 
-    public String getDate() {
-        return date;
+    public int getStatus() {
+        return status;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getV_id() {
+        return v_id;
+    }
+
+    public void setV_id(String v_id) {
+        this.v_id = v_id;
+    }
+
+    public String getP_id() {
+        return p_id;
+    }
+
+    public void setP_id(String p_id) {
+        this.p_id = p_id;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
+
