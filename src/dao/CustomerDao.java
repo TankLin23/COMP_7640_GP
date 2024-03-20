@@ -3,6 +3,7 @@ package dao;
 import model.Customer;
 import model.Vendor;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,14 +16,14 @@ public class CustomerDao {
 
 public Customer login(Connection connection,Customer customer)throws Exception{
     Customer resultcustomer=null;
-    String sql="select * from customer where custmoer_id=? and password=?";
+    String sql="select * from customer where customer_id=? and password=?";
     PreparedStatement preparedStatement=connection.prepareStatement(sql);
     preparedStatement.setString(1, customer.getID());
     preparedStatement.setString(2, customer.getPassword());
     ResultSet resultSet=preparedStatement.executeQuery();
     if (resultSet.next()){
         resultcustomer=new Customer();
-        resultcustomer.setID(resultSet.getString("id"));
+        resultcustomer.setID(resultSet.getString("customer_id"));
         resultcustomer.setContact_number(resultSet.getString("contact_number"));
         resultcustomer.setShipping_details(resultSet.getString("shipping_details"));
         resultcustomer.setPassword(resultSet.getString("password"));

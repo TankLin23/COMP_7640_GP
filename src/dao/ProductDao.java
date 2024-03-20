@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class ProductDao {
 
     public ResultSet get_product_by_tag(Connection connection,String tag)throws Exception{
-        String sql="select * from product join vendor on product.vendor_id=vendor.vendor_id where tag1=? or tag2=? or tag3=?";
+        String sql="select product.name, product.listed_price, product.product_quantity, vendor.geographical_presence,vendor.business_name, vendor.feedback_score from product join vendor on product.vendor_id=vendor.vendor_id where tag1=? or tag2=? or tag3=?";
         PreparedStatement preparedStatement= connection.prepareStatement(sql);
         preparedStatement.setString(1,tag);
         preparedStatement.setString(2,tag);

@@ -64,7 +64,7 @@ public class Vendorlogin extends JFrame {
                 Vendor.setVisible(true);
             }
             else{
-                JOptionPane.showMessageDialog(null,"The ID or password is incorrect");
+                JOptionPane.showMessageDialog(null, "The ID or password is incorrect");
                 return;
             }
         } catch (Exception ex) {
