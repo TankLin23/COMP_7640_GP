@@ -29,7 +29,7 @@ public class MainFrame extends JFrame {
         // TODO add your code here
         Vendorlogin Vendor = new Vendorlogin();
         Vendor.setVisible(true);
-        dispose();
+
     }
 
 

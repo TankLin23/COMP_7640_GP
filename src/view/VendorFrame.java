@@ -46,12 +46,12 @@ public class VendorFrame extends JFrame {
         UIManager.put("OptionPane.okButtonText", "OK");
         UIManager.put("OptionPane.cancelButtonText", "Cancel");
         Connection conn = null;
-        String productname = formattedTextField3.getText();
-        String quantityofproduct = formattedTextField4.getText();
-        String price = formattedTextField5.getText();
-        String tag1 = formattedTextField1.getText();
-        String tag2 = formattedTextField2.getText();
-        String tag3 = formattedTextField6.getText();
+        String productname = productnametext.getText();
+        String quantityofproduct = quantitytext.getText();
+        String price = pricetext.getText();
+        String tag1 = tag1textfield.getText();
+        String tag2 = tag2text.getText();
+        String tag3 = tag3text.getText();
         if(productname == null ||quantityofproduct==null||price==null||tag1==null||tag2==null||tag3==null){
             JOptionPane.showMessageDialog(null, "Null is not allowed!");
             return;
@@ -150,18 +150,18 @@ public class VendorFrame extends JFrame {
         button1 = new JButton();
         button2 = new JButton();
         title2 = compFactory.createTitle("Product name");
-        formattedTextField3 = new JFormattedTextField();
+        productnametext = new JFormattedTextField();
         title3 = compFactory.createTitle("Quantity of product");
-        formattedTextField4 = new JFormattedTextField();
+        quantitytext = new JFormattedTextField();
         title4 = compFactory.createTitle("Unit price of product");
-        formattedTextField5 = new JFormattedTextField();
+        pricetext = new JFormattedTextField();
         button3 = new JButton();
         title1 = compFactory.createTitle("Tag1");
-        formattedTextField1 = new JFormattedTextField();
+        tag1textfield = new JFormattedTextField();
         title5 = compFactory.createTitle("Tag2");
-        formattedTextField2 = new JFormattedTextField();
+        tag2text = new JFormattedTextField();
         title6 = compFactory.createTitle("Tag3");
-        formattedTextField6 = new JFormattedTextField();
+        tag3text = new JFormattedTextField();
         button4 = new JButton();
         title7 = compFactory.createTitle("product_id");
         formattedTextField7 = new JFormattedTextField();
@@ -218,16 +218,16 @@ public class VendorFrame extends JFrame {
                                                     .addGap(21, 21, 21)
                                                     .addComponent(title2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                                     .addGap(32, 32, 32)
-                                                    .addComponent(formattedTextField3, GroupLayout.PREFERRED_SIZE, 148, GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(productnametext, GroupLayout.PREFERRED_SIZE, 148, GroupLayout.PREFERRED_SIZE))
                                                 .addGroup(contentPaneLayout.createSequentialGroup()
                                                     .addComponent(title4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                                     .addGap(18, 18, 18)
-                                                    .addComponent(formattedTextField5, GroupLayout.PREFERRED_SIZE, 148, GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(pricetext, GroupLayout.PREFERRED_SIZE, 148, GroupLayout.PREFERRED_SIZE))
                                                 .addGroup(contentPaneLayout.createSequentialGroup()
                                                     .addGap(1, 1, 1)
                                                     .addComponent(title3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                                     .addGap(18, 18, 18)
-                                                    .addComponent(formattedTextField4, GroupLayout.PREFERRED_SIZE, 148, GroupLayout.PREFERRED_SIZE)))
+                                                    .addComponent(quantitytext, GroupLayout.PREFERRED_SIZE, 148, GroupLayout.PREFERRED_SIZE)))
                                             .addGap(31, 31, 31)
                                             .addGroup(contentPaneLayout.createParallelGroup()
                                                 .addComponent(title6, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
@@ -235,9 +235,9 @@ public class VendorFrame extends JFrame {
                                                 .addComponent(title5, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE))
                                             .addGap(31, 31, 31)
                                             .addGroup(contentPaneLayout.createParallelGroup()
-                                                .addComponent(formattedTextField1, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(formattedTextField6, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(formattedTextField2, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(tag1textfield, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(tag3text, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(tag2text, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE))
                                             .addGap(18, 18, 18)
                                             .addComponent(button1, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(contentPaneLayout.createSequentialGroup()
@@ -259,7 +259,7 @@ public class VendorFrame extends JFrame {
                                 .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addGap(153, 153, 153)
                                     .addComponent(textArea1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 62, Short.MAX_VALUE))
+                                    .addGap(0, 53, Short.MAX_VALUE))
                                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
                                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                                         .addGroup(contentPaneLayout.createSequentialGroup()
@@ -292,22 +292,22 @@ public class VendorFrame extends JFrame {
                                 .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(title2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(formattedTextField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(productnametext, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(title1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(formattedTextField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(tag1textfield, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                     .addGap(13, 13, 13)
                                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(title3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(formattedTextField4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(quantitytext, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(title5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(formattedTextField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(tag2text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                     .addGap(18, 18, 18)
                                     .addGroup(contentPaneLayout.createParallelGroup()
                                         .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                            .addComponent(formattedTextField5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(pricetext, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                             .addComponent(title4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                            .addComponent(formattedTextField6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tag3text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                             .addComponent(title6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
                                 .addComponent(button1, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE))
                             .addGap(18, 18, 18)
@@ -324,7 +324,7 @@ public class VendorFrame extends JFrame {
                             .addComponent(formattedTextField8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                             .addComponent(title9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                             .addComponent(formattedTextField9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(32, Short.MAX_VALUE))
+                    .addContainerGap(31, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -337,18 +337,18 @@ public class VendorFrame extends JFrame {
     private JButton button1;
     private JButton button2;
     private JLabel title2;
-    private JFormattedTextField formattedTextField3;
+    private JFormattedTextField productnametext;
     private JLabel title3;
-    private JFormattedTextField formattedTextField4;
+    private JFormattedTextField quantitytext;
     private JLabel title4;
-    private JFormattedTextField formattedTextField5;
+    private JFormattedTextField pricetext;
     private JButton button3;
     private JLabel title1;
-    private JFormattedTextField formattedTextField1;
+    private JFormattedTextField tag1textfield;
     private JLabel title5;
-    private JFormattedTextField formattedTextField2;
+    private JFormattedTextField tag2text;
     private JLabel title6;
-    private JFormattedTextField formattedTextField6;
+    private JFormattedTextField tag3text;
     private JButton button4;
     private JLabel title7;
     private JFormattedTextField formattedTextField7;

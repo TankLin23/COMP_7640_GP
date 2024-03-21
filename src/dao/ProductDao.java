@@ -30,10 +30,10 @@ public class ProductDao {
         preparedStatement.setString(1,product.getVendor_ID());
         preparedStatement.setString(2,product.getName());
         preparedStatement.setDouble(3,product.getPrice());
-        preparedStatement.setInt(4,product.getQuantity());
-        preparedStatement.setString(5,product.getTag1());
-        preparedStatement.setString(6,product.getTag2());
-        preparedStatement.setString(7,product.getTag3());
+        preparedStatement.setString(4,product.getTag1());
+        preparedStatement.setString(5,product.getTag2());
+        preparedStatement.setString(6,product.getTag3());
+        preparedStatement.setInt(7,product.getQuantity());
         return preparedStatement.executeUpdate();
     }
 

@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq {par l {seq {space :p:11:p, par l {seq l {par l {seq l {space :p:21:p, comp title2:::p::p, space :p:32:p, comp formattedTextField3:::p:148:p}, seq l {comp title4:::p::p, space s:::p, comp formattedTextField5:::p:148:p}, seq l {space :p:1:p, comp title3:::p::p, space :p:18:p, comp formattedTextField4:::p:148:p}}, space :p:31:p, par l {comp title6:::p:32:p, comp title1:::p::p, comp title5::l:p:32:p}, space :p:31:p, par l {comp formattedTextField1::l:p:96:p, comp formattedTextField6::t:p:96:p, comp formattedTextField2::t:p:96:p}, space s:::p, comp button1:::p:101:p}, seq l {comp title7:::p::p, space :p:10:p, comp formattedTextField7:::p:97:p, space :p:29:p, comp title8:::p::p, space s:::p, comp formattedTextField8:::p:97:p, space s:::p, comp title9:::p::p, space u:::p, comp formattedTextField9:::p:97:p}}}, seq l {space :p:24:p, comp title10:::p:326:p}}, par l {seq {space :p:153:p, comp textArea1:::p::p, space :0:62:x}, seq t {par t {seq t {space ::53:x, comp button5:::p:123:p}, seq l {space :0:0:x, par l:::p {comp button2::::119:x, comp button3::::119:x, comp button4::l::119:x}}}, space :p:32:p}}}, comp scrollPane1::t:::x}, space :::p}}"
-			"$verticalGroup": "par l {seq l {comp scrollPane1:::p:234:p, space :::p, par l {seq l {comp button3:::p:53:p, space :::p, comp button2:::p:43:p, space :::p, comp button4:::p::p}, seq l {par l {seq {par b {comp title2::b:p::p, comp formattedTextField3::b:p::p, comp title1::b:p::p, comp formattedTextField1::b:p::p}, space :p:13:p, par b {comp title3::b:p::p, comp formattedTextField4::b:p::p, comp title5::b:p::p, comp formattedTextField2::b:p::p}, space s:::p, par l {par b {comp formattedTextField5::b:p::p, comp title4::b:p::p}, par t:l {comp formattedTextField6:::p::p, comp title6:::p::p}}}, comp button1:::p:110:p}, space s:::p, par t {comp textArea1:::p::p, comp title10:::p::p}}}, space :::p, par l {comp button5:::p::p, par b {comp title7::b:p::p, comp formattedTextField7::b:p::p, comp title8::b:p::p, comp formattedTextField8::b:p::p, comp title9::b:p::p, comp formattedTextField9::b:p::p}}, space ::32:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq {par l {seq {space :p:11:p, par l {seq l {par l {seq l {space :p:21:p, comp title2:::p::p, space :p:32:p, comp productnametext:::p:148:p}, seq l {comp title4:::p::p, space s:::p, comp pricetext:::p:148:p}, seq l {space :p:1:p, comp title3:::p::p, space :p:18:p, comp quantitytext:::p:148:p}}, space :p:31:p, par l {comp title6:::p:32:p, comp title1:::p::p, comp title5::l:p:32:p}, space :p:31:p, par l {comp tag1textfield::l:p:96:p, comp tag3text::t:p:96:p, comp tag2text::t:p:96:p}, space s:::p, comp button1:::p:101:p}, seq l {comp title7:::p::p, space :p:10:p, comp formattedTextField7:::p:97:p, space :p:29:p, comp title8:::p::p, space s:::p, comp formattedTextField8:::p:97:p, space s:::p, comp title9:::p::p, space u:::p, comp formattedTextField9:::p:97:p}}}, seq l {space :p:24:p, comp title10:::p:326:p}}, par l {seq {space :p:153:p, comp textArea1:::p::p, space :0:53:x}, seq t {par t {seq t {space ::53:x, comp button5:::p:123:p}, seq l {space :0:0:x, par l:::p {comp button2::::119:x, comp button3::::119:x, comp button4::l::119:x}}}, space :p:32:p}}}, comp scrollPane1::t:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {comp scrollPane1:::p:234:p, space :::p, par l {seq l {comp button3:::p:53:p, space :::p, comp button2:::p:43:p, space :::p, comp button4:::p::p}, seq l {par l {seq {par b {comp title2::b:p::p, comp productnametext::b:p::p, comp title1::b:p::p, comp tag1textfield::b:p::p}, space :p:13:p, par b {comp title3::b:p::p, comp quantitytext::b:p::p, comp title5::b:p::p, comp tag2text::b:p::p}, space s:::p, par l {par b {comp pricetext::b:p::p, comp title4::b:p::p}, par t:l {comp tag3text:::p::p, comp title6:::p::p}}}, comp button1:::p:110:p}, space s:::p, par t {comp textArea1:::p::p, comp title10:::p::p}}}, space :::p, par l {comp button5:::p::p, par b {comp title7::b:p::p, comp formattedTextField7::b:p::p, comp title8::b:p::p, comp formattedTextField8::b:p::p, comp title9::b:p::p, comp formattedTextField9::b:p::p}}, space ::31:x}}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -29,21 +29,21 @@ new FormModel {
 				"textWithMnemonic": "Product name"
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField3"
+				name: "productnametext"
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title3"
 				"textWithMnemonic": "Quantity of product"
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField4"
+				name: "quantitytext"
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title4"
 				"textWithMnemonic": "Unit price of product"
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField5"
+				name: "pricetext"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
@@ -55,21 +55,21 @@ new FormModel {
 				"textWithMnemonic": "Tag1"
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField1"
+				name: "tag1textfield"
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title5"
 				"textWithMnemonic": "Tag2"
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField2"
+				name: "tag2text"
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title6"
 				"textWithMnemonic": "Tag3"
 			} )
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField6"
+				name: "tag3text"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
