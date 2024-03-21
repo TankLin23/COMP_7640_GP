@@ -4,166 +4,33 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq t {comp title1:::p:300:p, space :p:194:p}, seq {par l {seq {space :4:4:p, comp scrollPane1:::p:700:p}, seq l {space :p:278:p, comp button1:::p::p}}, space :p:9:p}}"
-			"$verticalGroup": "par l {seq {comp scrollPane1:::p:275:p, space ::27:x, comp title1:::p::p, space s:::p, comp button1:::p::p, space :p:37:p}}"
+			"$horizontalGroup": "par l {seq {space :4:4:p, comp scrollPane1:::p:700:p, space :9::x}, seq l {space :p:105:p, par l {seq l {space :0:0:x, comp title1:::p:300:p, space :p:39:p}, seq l {par t:::p {comp button3::l:::x, comp button2::l:::x}, space :::x, comp button1:::p::p, space :p:147:p}}}}"
+			"$verticalGroup": "par l {seq {comp scrollPane1:::p:275:p, space u:::p, comp title1:::p:26:p, space :::p, par b {comp button1::b:p::p, comp button2::b:p::p}, space :::p, comp button3:::p::p, space ::19:x}}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "scrollPane1"
 				add( new FormComponent( "javax.swing.JTable" ) {
 					name: "table1"
-					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-						add( new java.util.Vector {
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-							add( null )
-						} )
-					}, new java.util.Vector {
-						add( "Purchase time" )
-						add( "Product" )
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+						add( "Order_ID" )
+						add( "Customer_ID" )
+						add( "Status" )
+						add( "Vendor_name" )
+						add( "Vendor_ID" )
+						add( "Quantity" )
 						add( "Price" )
-						add( "Delivery or not" )
+						add( "Product_name" )
 						add( "Select" )
 					}, new java.util.Vector {
 						add( null )
 						add( null )
 						add( null )
 						add( null )
+						add( class java.lang.Object )
+						add( null )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
 						add( class java.lang.Boolean )
 					}, new java.util.Vector {
 						add( null )
@@ -171,7 +38,15 @@ new FormModel {
 						add( null )
 						add( null )
 						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
 					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
 						add( null )
 						add( null )
 						add( null )
@@ -188,6 +63,16 @@ new FormModel {
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
 				name: "title1"
 				"textWithMnemonic": "Please select the order you want to cancel"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Show all orders"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "showalldeals", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "Refresh"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Refresh", true ) )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

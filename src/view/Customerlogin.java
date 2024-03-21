@@ -55,8 +55,7 @@ public class Customerlogin extends JFrame {
             if (currentCustomer!=null){
                 dispose();
                 CustomerFrame CustomerFrame = new CustomerFrame();
-                System.out.println(CustomerID);
-                System.out.println(passwordString);
+                CustomerFrame.receiveValue(Integer.parseInt(CustomerID));
                 CustomerFrame.setVisible(true);
             }
             else{

@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :::p, comp scrollPane1::::746:x, space :::p}, seq l {par l {seq l {space :p:77:p, comp title3:::p::p, space s:::p, comp formattedTextField1:::p:241:p}, seq l {space :p:140:p, par l:::p {comp button5::::191:x, comp button1::::191:x}}}, space :p:69:p, par l {comp title5:::p:257:p, par t:l {seq {comp formattedTextField5:::p:132:p, space s:::p, comp button7:::p::p}, par l:t {comp button9::l:p:170:p, comp button8::t:p:170:p}}}, space :0:75:x}}"
-			"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:231:p, space :p:8:p, comp title5:::p::p, space :::p, par b {comp formattedTextField5::b:p::p, comp button7::b:p::p, comp title3::b:p::p, comp formattedTextField1::b:p::p}, space :::p, par b {comp button8::b:p::p, comp button5::b:p::p}, space u:::p, par b {comp button9::b:p::p, comp button1::b:p::p}, space ::37:x}}"
+			"$horizontalGroup": "par l {seq {space :::p, comp scrollPane1::::746:x, space :::p}, seq l {par l {seq l {space :p:77:p, comp title3:::p::p, space s:::p, comp formattedTextField1:::p:241:p}, seq l {space :p:140:p, par l:::p {comp button5::::191:x, comp button1::::191:x}}}, space :p:127:p, par l:::p {comp button9::l::170:x, comp button8::l::170:x, comp button7::::170:x}, space :0:104:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:231:p, space :p:31:p, par b {comp title3::b:p::p, comp formattedTextField1::b:p::p, comp button7::b:p::p}, space :::p, par b {comp button8::b:p::p, comp button5::b:p::p}, space u:::p, par b {comp button9::b:p::p, comp button1::b:p::p}, space ::37:x}}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -19,8 +19,11 @@ new FormModel {
 						add( "Location" )
 						add( "Tag" )
 						add( "Vendor" )
+						add( "Vendor ID" )
 						add( "Feedback Score" )
+						add( "Product_id" )
 						add( "Buy" )
+						add( "Quantity" )
 					}, new java.util.Vector {
 						add( null )
 						add( null )
@@ -29,7 +32,10 @@ new FormModel {
 						add( null )
 						add( null )
 						add( class java.lang.Object )
+						add( class java.lang.Object )
+						add( class java.lang.Object )
 						add( class java.lang.Boolean )
+						add( class java.lang.Integer )
 					}, new java.util.Vector {
 						add( null )
 						add( null )
@@ -39,7 +45,13 @@ new FormModel {
 						add( null )
 						add( null )
 						add( null )
+						add( null )
+						add( null )
+						add( null )
 					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
 						add( null )
 						add( null )
 						add( null )
@@ -59,13 +71,6 @@ new FormModel {
 				name: "button5"
 				"text": "Search "
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "SearchTag", true ) )
-			} )
-			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
-				name: "title5"
-				"textWithMnemonic": "Please enter the quantity purchased"
-			} )
-			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
-				name: "formattedTextField5"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button7"
@@ -88,7 +93,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
 				"text": "Refresh"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Refresh", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "refresh", true ) )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

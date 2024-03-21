@@ -9,16 +9,108 @@ new FormModel {
 				name: "scrollPane1"
 				add( new FormComponent( "javax.swing.JTable" ) {
 					name: "table1"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+						add( "Order_ID" )
+						add( "Customer_ID" )
+						add( "Status" )
+						add( "Vendor_name" )
+						add( "Vendor_ID" )
+						add( "Quantity" )
+						add( "Price" )
+						add( "Product_name" )
+						add( "Select" )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( class java.lang.Boolean )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 10
 				"y": 10
 				"width": 740
-				"height": 355
+				"height": 290
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "View record"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Viewrecord", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 155
+				"y": 320
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "good feedback"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "goodfeedback", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 535
+				"y": 335
+				"width": 115
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": " bad feedback"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "badfeedback", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 115
+				"height": 30
+				"x": 535
+				"y": 370
+			} )
+			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
+				name: "title1"
+				"textWithMnemonic": "Please select Record and rate"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 505
+				"y": 300
+				"width": 190
+				"height": 45
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "textPane1"
+					"text": "Tips: The basic score is 1, the positive review is increased by 0.1, and the bad review is decreased by 0.1"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 310
+				"y": 315
+				"width": 180
+				"height": 105
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+			}
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 770, 450 )
+			"size": new java.awt.Dimension( 770, 515 )
 		} )
 	}
 }

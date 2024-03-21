@@ -18,7 +18,7 @@ new FormModel {
 						add( "Quantity" )
 						add( "Price" )
 						add( "Product_name" )
-						add( "Select" )
+						add( "Feedback_score_now" )
 					}, new java.util.Vector {
 						add( null )
 						add( null )
@@ -28,7 +28,7 @@ new FormModel {
 						add( null )
 						add( null )
 						add( null )
-						add( class java.lang.Boolean )
+						add( null )
 					}, new java.util.Vector {
 						add( null )
 						add( null )
@@ -52,53 +52,35 @@ new FormModel {
 					} )
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 20
-				"y": 10
-				"width": 615
-				"height": 205
+				"x": 10
+				"y": 5
+				"height": 185
+				"width": 650
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "Deliver goods"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Delivergoods", true ) )
+				"text": "check"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "check", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 415
-				"y": 265
-				"width": 125
-				"height": 45
+				"x": 425
+				"y": 230
+				"height": 40
 			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button2"
-				"text": "View active trading orders"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Viewactivetradingorders", true ) )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "textPane1"
+					"text": "Tips: The basic score is 1, the positive review is increased by 0.1, and the bad review is decreased by 0.1"
+				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 165
-				"height": 45
-				"x": 85
-				"y": 235
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button4"
-				"text": "Refresh"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Refresh", true ) )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 165
-				"height": 45
-				"x": 85
-				"y": 285
-			} )
-			add( new FormComponent( "com.jformdesigner.designer.wrapper.JGoodiesFormsTitle" ) {
-				name: "title1"
-				"textWithMnemonic": "Please check the order to be shipped in the table"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 330
-				"y": 220
-				"width": 300
-				"height": 50
+				"x": 230
+				"y": 210
+				"width": 150
+				"height": 95
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 655, 405 )
+			"size": new java.awt.Dimension( 675, 410 )
 		} )
 	}
 }

@@ -80,13 +80,11 @@ public int feedback_positive(Connection connection,String v_id)throws SQLExcepti
      * @return
      * @throws SQLException
      */
-    public int update(Connection connection,Vendor v)throws SQLException{
-        String sql="update Vendor set business_name=?,feedback_score=?,geographical_presence=? where vendor_id=?";
+    public int updatefeedback(Connection connection, double score, int vid)throws SQLException{
+        String sql="update Vendor set feedback_score=? where vendor_id=?";
         PreparedStatement preparedStatement=connection.prepareStatement(sql);
-        preparedStatement.setString(1,v.getBusiness_name());
-        preparedStatement.setDouble(2,v.getFeedback_score());
-        preparedStatement.setString(3,v.getGeographical_presence());
-        preparedStatement.setString(4,v.getID());
+        preparedStatement.setDouble(1,score);
+        preparedStatement.setInt(2,vid);
         return preparedStatement.executeUpdate();
     }
 
