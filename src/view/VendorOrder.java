@@ -44,10 +44,24 @@ public class VendorOrder extends JFrame {
                 if(value8 == null){continue;}
                 int value0 = (int) table1.getValueAt(i, columnIndex0);
                 orderDao.update(conn,value0,status);
-                JOptionPane.showMessageDialog(null, "Deliver successfully");
             }
-
-        } catch (Exception ex) {
+            DefaultTableModel model = (DefaultTableModel) table1.getModel();
+            model.setRowCount(0);
+            ResultSet r = orderDao.getorderv(conn,v_id);
+            while(r.next()){
+                Vector<Serializable> vector = new Vector<>();
+                vector.add(r.getInt(1));
+                vector.add(r.getInt(2));
+                vector.add(r.getString(3));
+                vector.add(r.getString(4));
+                vector.add(r.getInt(5));
+                vector.add(r.getInt(6));
+                vector.add(r.getDouble(7));
+                vector.add(r.getString(8));
+                model.addRow(vector);
+            }
+            JOptionPane.showMessageDialog(null, "Deliver successfully");
+        }catch (Exception ex) {
             throw new RuntimeException(ex);
         }
     }
