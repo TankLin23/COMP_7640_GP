@@ -34,7 +34,8 @@ Then, you should execute the SQL in the project to import the database of this p
 
 
 Finally, please ensure your MYSQL service is open and you can just start the project.
-![f8116bacb7c5086fd2ceb0eb72933a6](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/16f45cd1-5c38-4bd3-9294-b4e444f2ac6b)
+![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/149382d6-5c3b-4457-a340-bc5d7e45317e)
+
 ### vendor interface
 Users can enter into a vendor management interface to select the existing vendors or onboard new 
 vendors by clicking "Sign in" button. 
