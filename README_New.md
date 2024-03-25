@@ -46,7 +46,7 @@ Next, users can login to the specific vendor account to browse the products info
 ### customer interface
 Returning to the customer interface, users can search for products based on tags and make purchases. After purchasing, product quantity will decrease and users can check their deals history which is also showed in the vendor interface. Before shipment, users can process for purchase cancelling and the cancelling records will be both changed in customer and vendor interface. Cancellation is not allowed after shipment.
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/36c8b133-0953-45b6-a79d-a30bbf8b270c)
-Besides, we have provided a rating function for customers so that vendor scan see the feedback score for each order in the history records.
+Besides, we have provided a rating function for customers so that vendors can see the feedback score for each order in the history records.
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/f03e63c9-6d8e-4385-9f2b-93b401837794)
 
 
