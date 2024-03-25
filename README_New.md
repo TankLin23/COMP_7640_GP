@@ -44,7 +44,8 @@ Next, users can login to the specific vendor account to browse the products info
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/7b624c1f-2ff5-4424-ac4b-8d0cabb307f8)
 
 By clicking the "View order" button, we can check the order and select whether we deliver the goods or not. 
-![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/c70a1998-ebf4-42b8-98c3-0e28fe32ec7b)
+![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/c70a1998-ebf4-42b8-98c3-0e28fe32ec7b)、
+![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/c18c27f9-663f-4faa-802a-97589536d575)
 
 By clicking the "Historical record" button, we can check the feedback scores for each order. 
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/14b89a5e-1fd3-4ec8-8496-bd7684a0b70e)
