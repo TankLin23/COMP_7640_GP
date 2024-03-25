@@ -37,16 +37,23 @@ Finally, please ensure your MYSQL service is open and you can just start the pro
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/149382d6-5c3b-4457-a340-bc5d7e45317e)
 
 ### vendor interface
-Users can enter into a vendor management interface to select the existing vendors or onboard new 
-vendors by clicking "Sign in" button. 
+Users can enter into a vendor management interface to select the existing vendors or onboard new vendors by clicking "Sign in" button. 
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/20585a6d-e7aa-400c-927b-8bb7d1236207)
 
 Next, users can login to the specific vendor account to browse the products information. In this process, users can introduce new products to the vendor’s catalogue and modify the product information as well.
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/7b624c1f-2ff5-4424-ac4b-8d0cabb307f8)
+
+By clicking the "View order" button, we can check the order and select whether we deliver the goods or not. 
+![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/c70a1998-ebf4-42b8-98c3-0e28fe32ec7b)
+
+By clicking the "Historical record" button, we can check the feedback scores for each order. 
+![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/14b89a5e-1fd3-4ec8-8496-bd7684a0b70e)
+
 ### customer interface
 Returning to the customer interface, users can search for products based on tags and make purchases. After purchasing, product quantity will decrease and users can check their deals history which is also showed in the vendor interface. Before shipment, users can process for purchase cancelling and the cancelling records will be both changed in customer and vendor interface. Cancellation is not allowed after shipment.
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/36c8b133-0953-45b6-a79d-a30bbf8b270c)
-Besides, we have provided a rating function for customers so that vendors can see the feedback score for each order in the history records.
+
+Besides, we have provided a rating function for customers to give some feedback for each product.
 ![image](https://github.com/TankLin23/COMP_7640_GP/assets/148514713/f03e63c9-6d8e-4385-9f2b-93b401837794)
 
 
